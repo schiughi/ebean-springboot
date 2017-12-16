@@ -1,0 +1,4 @@
+entity-packages: com.schiughi.esboot.domain
+querybean-packages: com.schiughi.esboot.domain
+transactional-packages: com.schiughi
+
