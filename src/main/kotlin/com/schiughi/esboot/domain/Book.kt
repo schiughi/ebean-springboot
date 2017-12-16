@@ -1,4 +1,4 @@
-package esboot.domain
+package com.schiughi.esboot.domain
 
 import io.ebean.Model
 import java.time.LocalDateTime

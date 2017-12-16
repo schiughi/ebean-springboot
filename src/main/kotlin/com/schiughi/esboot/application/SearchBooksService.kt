@@ -1,6 +1,6 @@
-package esboot.application
+package com.schiughi.esboot.application
 
-import esboot.domain.Book
+import com.schiughi.esboot.domain.Book
 import io.ebean.Ebean
 import org.springframework.stereotype.Service
 

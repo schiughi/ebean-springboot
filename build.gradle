@@ -55,7 +55,7 @@ dependencies {
     compile "io.ebean:ebean-querybean:10.3.1"
     compile 'com.h2database:h2:1.4.191'
     kapt "io.ebean:kotlin-querybean-generator:10.1.2"
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile "org.springframework.boot:spring-boot-starter-test"
 }
 
 kapt {
