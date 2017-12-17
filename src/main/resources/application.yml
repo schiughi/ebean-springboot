@@ -1,12 +1,9 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:tests
-    driver_class_name: org.h2.Driver
-    username: sa
-    password:
-    h2:
-      console:
-        enabled: true
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver_class_name: org.postgresql.Driver
+    username: postgres
+    password: postgres
 logging:
   level:
     org.avaje.ebean:

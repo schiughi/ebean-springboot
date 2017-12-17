@@ -1,10 +1,11 @@
 package com.schiughi.esboot.application
 
 import com.schiughi.esboot.domain.Book
-import io.ebean.Ebean
+import io.ebean.EbeanServer
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 
 @Service
-class SearchBooksService {
-    fun run(): List<Book> = Ebean.find(Book::class.java).findList()
+class SearchBooksService @Autowired constructor(private val server: EbeanServer) {
+    fun run(): List<Book> = server.find(Book::class.java).findList()
 }

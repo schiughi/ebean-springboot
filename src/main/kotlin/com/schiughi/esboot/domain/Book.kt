@@ -1,20 +1,18 @@
 package com.schiughi.esboot.domain
 
-import io.ebean.Model
-import java.time.LocalDateTime
+import io.ebean.annotation.Cache
 import javax.persistence.Entity
-import javax.persistence.Id
+import javax.persistence.Table
+import javax.validation.constraints.NotNull
 
+@Cache(enableQueryCache=true)
 @Entity
-class Book : Model() {
-    @Id
-    var id: Long = 0
-
-    var title: String = "UNKNOWN"
-
-    var isbn: String = ""
-
-    var created_at: LocalDateTime = LocalDateTime.now()
-
-    var updated_at: LocalDateTime = LocalDateTime.now()
+@Table(name = "books")
+data class Book(
+        @get: NotNull
+        var title: String = "UNKNOWN",
+        @get: NotNull
+        var isbn: String = ""
+) : BaseEntity(){
+    companion object find: BookFinder()
 }
