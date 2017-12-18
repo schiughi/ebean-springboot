@@ -1,6 +1,6 @@
 package com.schiughi.esboot.application
 
-import com.schiughi.esboot.domain.Book
+import com.schiughi.esboot.domain.book.Book
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod

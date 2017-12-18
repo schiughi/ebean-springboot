@@ -1,3 +1,3 @@
-entity-packages: com.schiughi.esboot.domain
-querybean-packages: com.schiughi.esboot.domain
+entity-packages: com.schiughi.esboot.infra.records
+querybean-packages: com.schiughi.esboot.infra.records
 transactional-packages: none
