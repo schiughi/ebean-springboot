@@ -13,7 +13,7 @@ class BookRecord(
         var title: String = "UNKNOWN",
         @get: NotNull
         var isbn: String = ""
-) : BaseRecord(){
+) : BaseRecord() {
     companion object find: BookFinder()
 
 }
