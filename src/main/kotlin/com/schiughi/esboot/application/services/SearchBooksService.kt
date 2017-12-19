@@ -1,8 +1,7 @@
-package com.schiughi.esboot.application
+package com.schiughi.esboot.application.services
 
-import com.schiughi.esboot.domain.BookRepository
-import com.schiughi.esboot.domain.book.Book
-import io.ebean.EbeanServer
+import com.schiughi.esboot.domain.repositories.BookRepository
+import com.schiughi.esboot.domain.entities.book.Book
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 

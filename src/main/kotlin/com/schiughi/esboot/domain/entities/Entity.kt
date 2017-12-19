@@ -1,4 +1,4 @@
-package com.schiughi.esboot.domain
+package com.schiughi.esboot.domain.entities
 
 import java.io.Serializable
 

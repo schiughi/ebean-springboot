@@ -1,6 +1,7 @@
-package com.schiughi.esboot.application
+package com.schiughi.esboot.application.controllers.api
 
-import com.schiughi.esboot.domain.book.Book
+import com.schiughi.esboot.application.services.SearchBooksService
+import com.schiughi.esboot.domain.entities.book.Book
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod

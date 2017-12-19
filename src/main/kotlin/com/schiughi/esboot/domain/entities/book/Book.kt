@@ -1,6 +1,6 @@
-package com.schiughi.esboot.domain.book
+package com.schiughi.esboot.domain.entities.book
 
-import com.schiughi.esboot.domain.Entity
+import com.schiughi.esboot.domain.entities.Entity
 import com.schiughi.esboot.infra.records.BookRecord
 
 class Book(
