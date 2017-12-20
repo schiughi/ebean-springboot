@@ -1,21 +1,21 @@
 package com.schiughi.esboot.application.controllers.api
 
-import com.schiughi.esboot.application.services.SearchBooksService
+import com.schiughi.esboot.application.forms.BookForm
+import com.schiughi.esboot.application.services.BooksService
+import com.schiughi.esboot.application.services.BooksServiceImpl
 import com.schiughi.esboot.domain.entities.book.Book
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.ResponseBody
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.http.MediaType
+import org.springframework.web.bind.annotation.*
 
 
 @RestController
-class BooksController @Autowired constructor(private val service: SearchBooksService) {
+class BooksController @Autowired constructor(private val service: BooksService) {
     @RequestMapping(value = "/books", method = arrayOf(RequestMethod.GET))
     @ResponseBody
-    fun index(): List<Book> = service.run()
+    fun index(): List<Book> = service.selectAll()
 
-    @RequestMapping(value = "/books/hello", method = arrayOf(RequestMethod.GET) )
+    @RequestMapping(value = "/books", method = arrayOf(RequestMethod.POST),  consumes = arrayOf(MediaType.APPLICATION_JSON_VALUE) )
     @ResponseBody
-    fun hello(): String = "hello!!"
+    fun create(@RequestBody bookForm: BookForm): Book = service.create(bookForm)
 }
