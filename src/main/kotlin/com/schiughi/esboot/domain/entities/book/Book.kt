@@ -10,9 +10,6 @@ class Book(
         val isbn: Isbn = Isbn("")
 ) : Entity<Book> {
     companion object {
-        fun of(record: BookRecord): Book {
-            return Book(title = record.title, isbn = Isbn(record.isbn))
-        }
         fun of(form: BookForm): Book {
             return Book(title = form.title , isbn = Isbn(form.isbn))
         }
