@@ -10,9 +10,8 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 @Transactional
 class RegisterNewArrivalBookCommandImpl @Autowired constructor(private val repository: BookRepository) : RegisterNewArrivalBookCommand {
-    override fun create(bookForm: BookForm): Book {
+    override fun create(bookForm: BookForm) {
         val book = Book.of(bookForm)
         repository.register(book)
-        return book
     }
 }
