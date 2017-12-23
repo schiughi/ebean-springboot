@@ -1,4 +1,4 @@
-package com.schiughi.esboot.infra
+package com.schiughi.esboot.infrastructure
 
 import io.ebean.config.CurrentUserProvider
 import org.springframework.stereotype.Component

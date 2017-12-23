@@ -6,4 +6,4 @@ data class BookForm(
         @NotBlank
         var title: String = "",
         @NotBlank
-        var isbn: String = "")
+        var isbn: String = "") : Form

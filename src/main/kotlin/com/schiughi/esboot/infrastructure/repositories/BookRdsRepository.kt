@@ -1,13 +1,13 @@
-package com.schiughi.esboot.infra.repositories
+package com.schiughi.esboot.infrastructure.repositories
 
 import com.schiughi.esboot.domain.entities.book.Book
 import com.schiughi.esboot.domain.repositories.BookRepository
-import com.schiughi.esboot.infra.records.BookRecord
+import com.schiughi.esboot.infrastructure.mappers.BookMapper
 import org.springframework.stereotype.Repository
 
 @Repository
 class BookRdsRepository : BookRepository {
     override fun register(book: Book) {
-        BookRecord(title = book.title, isbn = book.isbn.value).save()
+        BookMapper.convertToRecord(book).save()
     }
 }

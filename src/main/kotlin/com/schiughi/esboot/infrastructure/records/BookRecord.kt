@@ -1,4 +1,4 @@
-package com.schiughi.esboot.infra.records
+package com.schiughi.esboot.infrastructure.records
 
 import io.ebean.Finder
 import io.ebean.annotation.Cache
@@ -13,7 +13,7 @@ class BookRecord(
         var title: String = "UNKNOWN",
         @get: NotNull
         var isbn: String = ""
-) : BaseRecord() {
+) : BaseRecord(), Record {
     companion object find: BookFinder()
 
 }

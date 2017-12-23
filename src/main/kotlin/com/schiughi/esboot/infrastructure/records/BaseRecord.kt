@@ -1,6 +1,5 @@
-package com.schiughi.esboot.infra.records
+package com.schiughi.esboot.infrastructure.records
 
-import io.ebean.Ebean
 import io.ebean.Model
 import io.ebean.annotation.WhenCreated
 import io.ebean.annotation.WhenModified
