@@ -6,7 +6,9 @@ import com.schiughi.esboot.domain.entities.book.Isbn
 import com.schiughi.esboot.infrastructure.records.BookRecord
 
 object BookMapper : Mapper<BookForm,Book,BookRecord> {
-    override fun convertToEntity(bookForm: BookForm): Book = Book(title = bookForm.title, isbn = Isbn(bookForm.isbn))
+    override fun convertToEntity(form: BookForm): Book = Book(title = form.title, isbn = Isbn(form.isbn))
 
-    override fun convertToRecord(book: Book): BookRecord = BookRecord(title = book.title, isbn = book.isbn.toString())
+    override fun convertToEntity(record: BookRecord): Book = Book(title = record.title, isbn = Isbn(record.isbn))
+
+    override fun convertToRecord(entity: Book): BookRecord = BookRecord(title = entity.title, isbn = entity.isbn.toString())
 }

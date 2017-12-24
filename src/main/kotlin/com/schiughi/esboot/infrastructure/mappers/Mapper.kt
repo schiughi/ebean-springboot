@@ -7,14 +7,14 @@ import com.schiughi.esboot.infrastructure.records.Record
 /**
  * レイヤー間のデータの受け渡しを担うインターフェース
  * Query層では使用しない
- * 処理の流れは Form -> Entity -> Record に限られる。
- *
  */
-interface Mapper <in F, E, out R>
+interface Mapper <in F, E, R>
         where F: Form,
               E: Entity,
               R: Record {
     fun convertToEntity(form: F): E
+
+    fun convertToEntity(record: R): E
 
     fun convertToRecord(entity: E): R
 }
