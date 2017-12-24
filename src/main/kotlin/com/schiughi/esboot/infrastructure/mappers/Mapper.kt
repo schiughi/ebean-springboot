@@ -10,9 +10,11 @@ import com.schiughi.esboot.infrastructure.records.Record
  * 処理の流れは Form -> Entity -> Record に限られる。
  *
  */
-interface Mapper <in F : Form, E : Entity, out R: Record>{
+interface Mapper <in F, E, out R>
+        where F: Form,
+              E: Entity,
+              R: Record {
     fun convertToEntity(form: F): E
 
     fun convertToRecord(entity: E): R
 }
-
